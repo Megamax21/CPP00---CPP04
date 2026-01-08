@@ -6,7 +6,7 @@
 /*   By: ml-hote <ml-hote@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 00:41:43 by ml-hote           #+#    #+#             */
-/*   Updated: 2026/01/08 00:49:57 by ml-hote          ###   ########.fr       */
+/*   Updated: 2026/01/08 22:06:24 by ml-hote          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 int	main(void)
 {
 	PhoneBook my_phonebook;
+	while (my_phonebook.phone_book_loop() == 0);
 	return (0);
 }

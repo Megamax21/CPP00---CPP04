@@ -10,6 +10,12 @@ private:
 public:
 	// Constructor
 	PhoneBook();
+
+	int		phone_book_loop(void);
+	int		get_prompt_value(string prompt);
+	int		get_free_id(void);
+
+	void	renew_contacts(void);
 };
 
 #endif
