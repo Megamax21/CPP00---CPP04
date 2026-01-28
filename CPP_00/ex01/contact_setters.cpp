@@ -6,7 +6,7 @@
 /*   By: ml-hote <ml-hote@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 19:17:07 by ml-hote           #+#    #+#             */
-/*   Updated: 2026/01/08 22:05:40 by ml-hote          ###   ########.fr       */
+/*   Updated: 2026/01/19 15:56:02 by ml-hote          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 void	Contact::set_id(int id)
 {
-	// cout << "set id to " << id << endl;
+	// std::cout << "set id to " << id << std::endl;
 	this->id = id;
 }
 
-void	Contact::set_first_name(string first_name)
+void	Contact::set_first_name(std::string first_name)
 {
 	this->first_name = first_name;
 }
 
-void	Contact::set_last_name(string last_name)
+void	Contact::set_last_name(std::string last_name)
 {
 	this->last_name = last_name;
 }
-void	Contact::set_nickname(string nickname)
+void	Contact::set_nickname(std::string nickname)
 {
 	this->nickname = nickname;
 }
@@ -37,12 +37,12 @@ void	Contact::set_existing(bool existing)
 	this->existing = existing;
 }
 
-void	Contact::set_phone_number(string phone_number)
+void	Contact::set_phone_number(std::string phone_number)
 {
 	this->phone_number = phone_number;
 }
 
-void	Contact::set_darkest_secret(string darkest_secret)
+void	Contact::set_darkest_secret(std::string darkest_secret)
 {
 	this->darkest_secret = darkest_secret;
 }
