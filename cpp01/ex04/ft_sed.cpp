@@ -6,7 +6,7 @@
 /*   By: ml-hote <ml-hote@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 16:50:22 by ml-hote           #+#    #+#             */
-/*   Updated: 2026/02/19 00:37:45 by ml-hote          ###   ########.fr       */
+/*   Updated: 2026/03/18 13:49:38 by ml-hote          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	parsing(int ac, char (**av))
 	std::string	line;
 	std::string	outLine;
 	std::string outFileName = av[1];
-	std::ofstream outputFile(outFileName+".replace");
+	std::ofstream outputFile((outFileName+".replace").c_str());
 	// Read each line from the file and print it
 	while (getline(inputFile, line))
 	{

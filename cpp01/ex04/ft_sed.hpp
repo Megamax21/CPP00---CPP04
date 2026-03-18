@@ -6,7 +6,7 @@
 /*   By: ml-hote <ml-hote@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 16:46:18 by ml-hote           #+#    #+#             */
-/*   Updated: 2026/02/18 16:55:54 by ml-hote          ###   ########.fr       */
+/*   Updated: 2026/03/18 13:47:30 by ml-hote          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <stdlib.h>
 
 void	parsing(int ac, char (**av));
 

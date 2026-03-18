@@ -1,7 +1,7 @@
 NAME = HiThisIsBrain
 
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -g
+CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98
 
 SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
