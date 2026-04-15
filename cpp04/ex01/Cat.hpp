@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ml-hote <ml-hote@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,36 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#ifndef CAT_HPP
+#define CAT_HPP
 
-Dog::Dog() : Animal()
-{
-	this->type = "Dog";
-	std::cout << "Dog default constructor called" << std::endl;
-}
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-Dog::Dog(const Dog& other) : Animal(other)
+class Cat : public Animal
 {
-	this->type = other.type;
-	std::cout << "Dog copy constructor called" << std::endl;
-}
+private:
+	Brain*	brain;
 
-Dog& Dog::operator=(const Dog& other)
-{
-	if (this == &other)
-		return (*this);
-	Animal::operator=(other);
-	this->type = other.type;
-	std::cout << "Dog copy assignment operator called" << std::endl;
-	return (*this);
-}
+public:
+	Cat();
+	Cat(const Cat& other);
+	Cat& operator=(const Cat& other);
+	virtual ~Cat();
 
-Dog::~Dog()
-{
-	std::cout << "Dog destructor called" << std::endl;
-}
+	virtual void makeSound() const;
+};
 
-void Dog::makeSound() const
-{
-	std::cout << "Woof woof!" << std::endl;
-}
+#endif

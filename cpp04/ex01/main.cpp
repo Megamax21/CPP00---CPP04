@@ -6,30 +6,39 @@
 /*   By: ml-hote <ml-hote@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/27 03:12:04 by ml-hote           #+#    #+#             */
-/*   Updated: 2026/04/03 20:24:26 by ml-hote          ###   ########.fr       */
+/*   Updated: 2026/04/03 20:24:54 by ml-hote          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "ABS_Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 
 int main()
 {
-	const Animal* base = new Animal();
-	const Animal* dog = new Dog();
-	const Animal* cat = new Cat();
+	std::cout << "=== Test 1: Basic dynamic dispatch ===" << std::endl;
+	Animal* zoo[4];
+	zoo[0] = new Dog();
+	zoo[1] = new Cat();
+	zoo[2] = new Dog();
+	zoo[3] = new Cat();
 
-	std::cout << "Base type: " << base->getType() << std::endl;
-	std::cout << "Dog type: " << dog->getType() << std::endl;
-	std::cout << "Cat type: " << cat->getType() << std::endl;
+	for (int i = 0; i < 4; ++i)
+	{
+		std::cout << "Type: " << zoo[i]->getType() << " | Sound: ";
+		zoo[i]->makeSound();
+	}
 
-	base->makeSound();
-	dog->makeSound();
-	cat->makeSound();
+	std::cout << std::endl;
+	std::cout << "=== Test 2: Base object behavior ===" << std::endl;
+	Animal base;
+	std::cout << "Type: " << base.getType() << " | Sound: ";
+	base.makeSound();
 
-	delete base;
-	delete dog;
-	delete cat;
-	return (0);
+	std::cout << std::endl;
+	std::cout << "=== Test 3: Deletion through ABS_Animal* (virtual destructor) ===" << std::endl;
+	for (int i = 0; i < 4; ++i)
+		delete zoo[i];
+
+	return 0;
 }

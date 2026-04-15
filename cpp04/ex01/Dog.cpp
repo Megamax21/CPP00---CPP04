@@ -14,12 +14,14 @@
 
 Dog::Dog() : Animal()
 {
+	this->brain = new Brain();
 	this->type = "Dog";
 	std::cout << "Dog default constructor called" << std::endl;
 }
 
 Dog::Dog(const Dog& other) : Animal(other)
 {
+	this->brain = new Brain(*other.brain);
 	this->type = other.type;
 	std::cout << "Dog copy constructor called" << std::endl;
 }
@@ -36,6 +38,7 @@ Dog& Dog::operator=(const Dog& other)
 
 Dog::~Dog()
 {
+	delete this->brain;
 	std::cout << "Dog destructor called" << std::endl;
 }
 
